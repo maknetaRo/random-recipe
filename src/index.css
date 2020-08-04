@@ -9,6 +9,7 @@ body {
 
 .card {
   max-width: 1200px;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 450px auto;
@@ -64,7 +65,7 @@ body {
   line-height: 24px;
   text-transform: uppercase;
   font-weight: lighter;
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 
 .category-row {
@@ -93,36 +94,66 @@ h3 {
 
 .recipe {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2.2fr;
   width: calc(100% - 80px);
   margin: 1rem auto 3rem;
 }
 
 .recipe h3 {
   text-transform: uppercase;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .method,
-.ingredients {
+.ingredients,
+.list {
   text-align: left;
   padding: 1.5rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  font-size: 1.2rem;
+  
 }
 .ingredients {
   padding-left: 0;
+  line-height: 1.5;
+ 
+}
+
+.list {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.measure {
+  font-weight: 300;
+  color: #c73d67;
+  padding-right: 0.5rem;
 }
 .description {
   padding-right: 1.5rem;
 }
 
 @media screen and (max-width: 860px) {
+  
   .recipe {
     grid-template-rows: 1fr auto;
     grid-template-columns: 1fr;
+    margin: 0 auto;
+    width: 100%;
+    
   }
   .method {
-    padding-left: 0;
+    padding: 0;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .ingredients {
+    padding-right: 0;
+  }
+  .title h1 {
+    font-size: 1.1rem;
+  }
+  .source {
+    margin: 0;
+    padding-top: 1rem;
   }
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Axios from "axios";
 
 import Recipe from "./components/Recipe";
-import Ingredinets from "./components/Ingredients";
+
 
 const FoodApi = () => {
   const [recipes, setRecipes] = useState([]);
@@ -29,9 +29,7 @@ const FoodApi = () => {
       <div className="recipes">
         {recipes !== [] &&
           recipes.map((recipe) => (
-            <>
-              <Recipe key={recipe.idMeal} recipe={recipe} />
-            </>
+            <Recipe key={recipe.idMeal} recipe={recipe} />
           ))}
       </div>
     </div>
